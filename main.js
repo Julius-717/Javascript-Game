@@ -153,4 +153,9 @@ function updateEntities(dt) {
             i--;
         }
     }
+
+    for (var i = 0; i < enemies.length; i++) {
+        enemies[i].pos[0] -= enemySpeed * dt;
+        enemies[i].sprite.update(dt);
+    }
 }
