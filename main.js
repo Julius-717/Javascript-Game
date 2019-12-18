@@ -37,3 +37,8 @@ function init() {
     lastTime = Date.now();
     main();
 }
+
+resources.load([
+    'img/sprites.png',
+    'img/terrain.png'
+]);
