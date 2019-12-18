@@ -157,5 +157,10 @@ function updateEntities(dt) {
     for (var i = 0; i < enemies.length; i++) {
         enemies[i].pos[0] -= enemySpeed * dt;
         enemies[i].sprite.update(dt);
+
+        if (enemies[1].pos[0] + enemies[i].sprite.size[0] < 0) {
+            enemies.splice(i, 1);
+            i--;
+        }
     }
 }
