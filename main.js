@@ -277,3 +277,16 @@ function gameOver() {
     document.getElementById("game-over-overlay").style.display = "block";
     isGameOver = true;
 }
+
+function reset() {
+    document.getElementById("game-over").style.display = "none";
+    document.getElementById("game-over-overlay").style.display = "none";
+    isGameOver = false;
+    gameTime = 0;
+    score = 0;
+
+    enemies = [];
+    bullets = [];
+
+    player.pos = [50, canvas.height / 2];
+}
