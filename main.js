@@ -193,4 +193,19 @@ function boxCollides(pos, size, pos2, size2) {
 
 function checkCollisions() {
     checkPlayerBounds();
+
+    for (var i = 0; i < enemies.length; i++) {
+        var pos = enemies[i].pos;
+        var size = enemies[i].sprite.size;
+
+        for (var j = 0; j < bullets.length; j++) {
+            var pos2 = bullets[j].pos;
+            var size2 = bullets[j].sprite.size;
+
+            if (boxCollides(pos, size, pos2, size2)) {
+                enemies.splice(i, 1);
+                i--;
+            }
+        }
+    }
 }
