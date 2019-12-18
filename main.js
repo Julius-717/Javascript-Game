@@ -205,6 +205,8 @@ function checkCollisions() {
             if (boxCollides(pos, size, pos2, size2)) {
                 enemies.splice(i, 1);
                 i--;
+
+                score += 100;
             }
         }
     }
