@@ -80,4 +80,9 @@ function update(dt) {
             sprite: new Sprite('img/sprites.png', [0, 78], [80, 39], 6, [0, 1, 2, 3, 2, 1])
         });
     }
-}
+
+    checkCollisions();
+
+    scoreEl.innerHTML = score;
+};
+
