@@ -129,4 +129,19 @@ function handleInput(dt) {
 
 function updateEntities(dt) {
     player.sprite.update(dt);
+
+    for (var i = 0; i < bullets.length; i++) {
+        var bullet = bullets[i];
+
+        switch (bullet.dir) {
+            case "up":
+                bullet.pos[1] -= bulletSpeed * dt;
+                break;
+            case "down":
+                bullet.pos[1] += bulletSpeed * dt;
+                break;
+            default:
+                bullet.pos[0] += bulletSpeed * dt;
+        }
+    }
 }
