@@ -60,3 +60,8 @@ var terrainPattern;
 
 var score = 0;
 var scoreEl = document.getElementById('score');
+
+
+var playerSpeed = 200;
+var bulletSpeed = 500;
+var enemySpeed = 100;
