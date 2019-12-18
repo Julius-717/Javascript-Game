@@ -65,3 +65,19 @@ var scoreEl = document.getElementById('score');
 var playerSpeed = 200;
 var bulletSpeed = 500;
 var enemySpeed = 100;
+
+function update(dt) {
+    gameTime += dt;
+
+    handleInput(dt);
+    updateEntities(dt);
+
+    // It gets harder over time by adding enemies using this
+    // equation: 1-.993^gameTime
+    if(Math.random() < 1 - Math.pow(.993, gameTime)) {
+        enemies.push({
+            pos: [canvas.width, Math.random() * (canvas.height - 39)],
+            sprite: new Sprite('img/sprites.png', [0, 78], [80, 39], 6, [0, 1, 2, 3, 2, 1])
+        });
+    }
+}
