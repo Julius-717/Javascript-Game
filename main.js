@@ -190,3 +190,7 @@ function boxCollides(pos, size, pos2, size2) {
         pos2[1] + size2[1]
     );
 }
+
+function checkCollisions() {
+    checkPlayerBounds();
+}
