@@ -271,3 +271,9 @@ function renderEntity(entity) {
     entity.sprite.render(ctx);
     ctx.restore();
 }
+
+function gameOver() {
+    document.getElementById("game-over").style.display = "block";
+    document.getElementById("game-over-overlay").style.display = "block";
+    isGameOver = true;
+}
