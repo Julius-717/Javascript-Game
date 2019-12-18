@@ -245,3 +245,8 @@ function checkPlayerBounds() {
         player.pos[1] = canvas.height - player.sprite.size[1];
     }
 }
+
+function render() {
+    ctx.fillStyle = terrainPattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
