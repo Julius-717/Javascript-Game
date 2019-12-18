@@ -126,3 +126,7 @@ function handleInput(dt) {
         lastFire = Date.now();
     }
 }
+
+function updateEntities(dt) {
+    player.sprite.update(dt);
+}
