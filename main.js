@@ -32,4 +32,8 @@ function init() {
     document.getElementById('play-again').addEventListener('click', function() {
         reset();
     });
+
+    reset();
+    lastTime = Date.now();
+    main();
 }
