@@ -219,7 +219,10 @@ function checkCollisions() {
                         null,
                         true
                     )
-                })
+                });
+
+                bullets.splice(j, 1);
+                break;
             }
         }
     }
