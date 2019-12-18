@@ -143,5 +143,14 @@ function updateEntities(dt) {
             default:
                 bullet.pos[0] += bulletSpeed * dt;
         }
+
+        if (
+            bullet.pos[1] < 0 ||
+            bullet.pos[1] > canvas.height ||
+            bullet.pos[0] > canvas.width
+        ) {
+            bullets.splice(i, 1);
+            i--;
+        }
     }
 }
