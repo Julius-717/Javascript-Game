@@ -166,5 +166,10 @@ function updateEntities(dt) {
 
     for (var i = 0; i < explosions.length; i++) {
         explosions[i].sprite.update(dt);
+
+        if (explosions[i].sprite.done) {
+            explosions.splice(i, 1);
+            i--;
+        }
     }
 }
