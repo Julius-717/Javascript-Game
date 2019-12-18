@@ -225,5 +225,9 @@ function checkCollisions() {
                 break;
             }
         }
+
+        if (boxCollides(pos, size, player.pos, player.sprite.aize)) {
+            gameOver();
+        }
     }
 }
