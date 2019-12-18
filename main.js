@@ -26,3 +26,8 @@ function main() {
     lastTime = now;
     requestAnimFrame(main);
 };
+
+function init() {
+    terrainPattern = ctx.createPattern(resources.get('img/terrain.png'), 'repeat');
+    
+}
