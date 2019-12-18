@@ -163,4 +163,8 @@ function updateEntities(dt) {
             i--;
         }
     }
+
+    for (var i = 0; i < explosions.length; i++) {
+        explosions[i].sprite.update(dt);
+    }
 }
