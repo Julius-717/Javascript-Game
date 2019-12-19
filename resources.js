@@ -50,4 +50,11 @@
     function onReady(func) {
         readyCallbacks.push(func);
     }
-})
+
+    window.resources = {
+        load: load,
+        get: get,
+        onReady: onReady,
+        isReady: isReady
+    };
+})();
