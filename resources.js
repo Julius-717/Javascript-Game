@@ -13,5 +13,25 @@
             _load(urlOrArr);
         }
     }
+
+    function _load(url) {
+        if (resourceCache[url]) {
+            return resourceCache[url];
+        } else {
+            var img = new Image();
+            img.onload = function() {
+                resourceCache[url] = img;
+
+                if (isReady()) {
+                    readyCallbacks.forEach(function(func) {
+                        func();
+                    });
+                }
+            };
+            resourceCache[url] = false;
+            img.src = url;
+        }
+    }
+
     
 })
