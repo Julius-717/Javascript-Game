@@ -46,4 +46,8 @@
         }
         return ready;
     }
+
+    function onReady(func) {
+        readyCallbacks.push(func);
+    }
 })
